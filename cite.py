@@ -19,8 +19,8 @@ if description_show == 'над проектом работали':
         st.image(leraimage, caption="Лера | UNet bender | Data Scientist", use_column_width=True) 
     with col3:
         olyaimage = Image.open("images/olya.jpg")
-        st.image(olyaimage, caption="Олья | streamlit master | Frontender", use_column_width=True) 
-    st.markdown("###### *разделения условны")
+        st.image(olyaimage, caption="Оля | streamlit master | Frontender", use_column_width=True) 
+    st.markdown("###### *разделения условны, совпадения случайны")
 
 
 if description_show == 'Cosplay model (bonus)':
