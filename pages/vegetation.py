@@ -48,7 +48,7 @@ class LocModel(nn.Module):
 class_names = ['cucumber', 'eggplant', 'mushroom']
 model = torch.load("model_vegetation/veg.pth", map_location=torch.device('cpu'))
 model.eval()
-st.title("This App recognizes objects in images")
+st.title("This App recognizes vegetables in images")
 
 url = st.text_input("Enter image URL")
 

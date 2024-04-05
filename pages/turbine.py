@@ -21,7 +21,7 @@ def get_model():
     return model
 
 
-st.title("This App recognizes objects in images")
+st.title("This App recognizes turbines and cabel towers in images")
 
 url = st.text_input("Enter image URL")
 
