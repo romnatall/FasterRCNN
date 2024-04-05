@@ -110,6 +110,15 @@ elif description_show == 'Vegetation model':
 
 
 elif description_show == 'UNet model':
-    pass
+    
+    st.subheader("Дополнительная информация о датасете и модели")
+
+    st.write("Этот набор данных содержит 5108 аэрофотоснимков размером 256x256.")
+    st.write("Файл Meta_data.csv хранит информацию об аэрофотоснимках и соответствующих им изображениях двоичных масок.")
+    st.write("Класс ForestDataset используется для загрузки изображений леса и их масок сегментации.")
+    st.write("Модель UNet на основе архитектуры VGG-11 обучалась для сегментации в течение 10 эпох.")
+
+    st.image("/images/forest/losses_and_metrics.jpg", caption="Графики потерь и метрик", use_column_width=True)
+
 
 
