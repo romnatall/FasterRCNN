@@ -10,10 +10,11 @@
 - Для обучения модели использовался датасет из 2885 изображений с ветряками и электрическими столбами.
 - Модель обучалась в течение 8 эпох.
 
-![Примеры изображений с обнаруженными ветряками](images/yolo results/img2.jpg)
-![Нормализованная матрица ошибок](images/yolo results/confusion_matrix_normalized.png)
-![Precision-Recall график](images/yolo results/PR_curve (1).png)
-![График результатов](images/yolo results/results (1).png)
+![Примеры изображений с обнаруженными ветряками](images/yolo_results/img2.jpg)
+![Нормализованная матрица ошибок](images/yolo_results/confusion_matrix_normalized.png)
+![Precision-Recall график](images/yolo_results/PR_curve_1.png)
+![График результатов](images/yolo_results/results_1.png)
+
 
 ### Модель на основе ResNet-18 для классификации и локализации овощей
 
