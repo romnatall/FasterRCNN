@@ -107,7 +107,7 @@ elif description_show == 'Vegetation model':
     st.write("- Использование модели ResNet-18 для классификации и локализации объектов.")
     st.write("- Обучение модели на небольшом датасете в течение 10 эпох.")
     st.write("- Применение замороженных слоев извлекателя признаков и отдельных блоков для классификации и предсказания координат.")
-
+    st.image("images/veg/losses_and_metrics.jpg", caption="Графики потерь и метрик", use_column_width=True)
 
 elif description_show == 'UNet forest model':
     
@@ -118,7 +118,7 @@ elif description_show == 'UNet forest model':
     st.write("Класс ForestDataset используется для загрузки изображений леса и их масок сегментации.")
     st.write("Модель UNet на основе архитектуры VGG-11 обучалась для сегментации в течение 10 эпох.")
 
-    st.image("images/forest/losses_and_metrics.jpg", caption="Графики потерь и метрик", use_column_width=True)
+    
 
 
 
