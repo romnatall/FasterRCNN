@@ -1,4 +1,3 @@
-from turtle import up
 import streamlit as st
 import torch
 import torchvision
