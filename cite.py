@@ -1,9 +1,27 @@
+from calendar import c
 import streamlit as st
 from PIL import Image
 st.title("FRCNN project")
 
-description_show_options = ['main','UNet forest model','Turbine model','Vegetation model','Cosplay model (bonus)']
+description_show_options = ['main','UNet forest model','Turbine model','Vegetation model','Cosplay model (bonus)','над проектом работали']
 description_show = st.sidebar.radio("Description", description_show_options)
+
+if description_show == 'над проектом работали':
+    
+    st.title(" над проектом работали")
+    col1, col2, col3 = st.columns(3)
+    with col1:
+
+        romaimage = Image.open("images/roma.jpg")
+        st.image(romaimage, caption="Рома | cosplayNet enjoyer | DevOps", use_column_width=True)
+    with col2:
+        leraimage = Image.open("images/Lera.png")
+        st.image(leraimage, caption="Лера | UNet bender | Data Scientist", use_column_width=True) 
+    with col3:
+        olyaimage = Image.open("images/olya.jpg")
+        st.image(olyaimage, caption="Олья | streamlit master | Frontender", use_column_width=True) 
+    st.markdown("###### *разделения условны")
+
 
 if description_show == 'Cosplay model (bonus)':
     st.write("Эта модель обучена для обнаружения косплееров на изображениях.")
