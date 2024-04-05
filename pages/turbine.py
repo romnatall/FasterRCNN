@@ -34,6 +34,9 @@ def detect(image: Image) -> Image:
     detect_img = Image.fromarray(detect_img)
     return detect_img
 
+
+# Загрузка и обработка изображения из файла
+uploaded_file = st.file_uploader("Or upload an image file", type=["jpg", "jpeg", "png"])
 if url:
     try:
         response = requests.get(url)
@@ -46,8 +49,6 @@ if url:
     except requests.exceptions.RequestException as e:
         st.error(f"An error occurred: {e}")
 
-# Загрузка и обработка изображения из файла
-uploaded_file = st.file_uploader("Or upload an image file", type=["jpg", "jpeg", "png"])
 if uploaded_file:
     image = Image.open(uploaded_file).convert('RGB')
     st.image(image, caption="Uploaded Image", use_column_width=True)
