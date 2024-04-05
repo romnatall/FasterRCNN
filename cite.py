@@ -76,23 +76,23 @@ if description_show == 'Turbine model':
     st.subheader("Пример изображений с обнаруженными ветряками и столбами:")
     col1, col2 = st.columns(2)
     with col1:
-        turbine_image1 = Image.open("images/yolo results/img1.jpg")
+        turbine_image1 = Image.open("images/yolo_results/img1.jpg")
         st.image(turbine_image1, caption="Пример с обнаруженными ветряками 1", use_column_width=True)
     with col2:
-        turbine_image2 = Image.open("images/yolo results/img2.jpg")
+        turbine_image2 = Image.open("images/yolo_results/img2.jpg")
         st.image(turbine_image2, caption="Пример с обнаруженными ветряками 2", use_column_width=True)
     st.subheader("Метрики модели:")
 
     st.write("- Матрица ошибок (Confusion Matrix):")
-    confusion_matrix_normalized_image = Image.open("images/yolo results/confusion_matrix_normalized.png")
+    confusion_matrix_normalized_image = Image.open("images/yolo_results/confusion_matrix_normalized.png")
     st.image(confusion_matrix_normalized_image, caption="Нормализованная матрица ошибок", use_column_width=True)
     
     st.write("- График Precision-Recall:")
-    pr_curve_image = Image.open("images/yolo results/PR_curve (1).png")
+    pr_curve_image = Image.open("images/yolo_results/PR_curve (1).png")
     st.image(pr_curve_image, caption="Precision-Recall график", use_column_width=True)
 
     st.write("- График результатов:")
-    results_image = Image.open("images/yolo results/results (1).png")
+    results_image = Image.open("images/yolo_results/results (1).png")
     st.image(results_image, caption="График результатов", use_column_width=True)
 
 elif description_show == 'Vegetation model':
