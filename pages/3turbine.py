@@ -36,7 +36,7 @@ def detect(image: Image) -> Image:
 
 
 # Загрузка и обработка изображения из файла
-uploaded_file = st.file_uploader("Or upload an image file", type=["jpg", "jpeg", "png","webp"])
+uploaded_files = st.file_uploader("Or upload an image file",allow_multiple_files=True, type=["jpg", "jpeg", "png" ,"webp"])
 
 if url:
     try:
@@ -50,7 +50,7 @@ if url:
     except requests.exceptions.RequestException as e:
         st.error(f"An error occurred: {e}")
 
-if uploaded_file:
+for uploaded_file in uploaded_files:
     image = Image.open(uploaded_file).convert('RGB')
     st.image(image, caption="Uploaded Image", use_column_width=True)
     if st.button("Classify Uploaded Image"):

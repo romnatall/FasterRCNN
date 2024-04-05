@@ -56,7 +56,7 @@ st.title("UNet for Image Segmentation")
 
 url = st.text_input("Enter image URL")
 # Загрузка изображения
-uploaded_file = st.file_uploader("Upload an image", type=["jpg", "jpeg", "png","webp"])
+uploaded_files = st.file_uploader("Upload an image" , accept_multiple_files=True,  type=["jpg", "jpeg", "png","webp"])
 
 if url:
     try:
@@ -68,7 +68,7 @@ if url:
         st.error(f"An error occurred: {e}")
 
 
-if uploaded_file:
+for uploaded_file in uploaded_files:
     try:
         image = Image.open(uploaded_file).convert('RGB')
     except Exception as e:
