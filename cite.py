@@ -88,11 +88,11 @@ if description_show == 'Turbine model':
     st.image(confusion_matrix_normalized_image, caption="Нормализованная матрица ошибок", use_column_width=True)
     
     st.write("- График Precision-Recall:")
-    pr_curve_image = Image.open("images/yolo_results/PR_curve (1).png")
+    pr_curve_image = Image.open("images/yolo_results/PR_curve.png")
     st.image(pr_curve_image, caption="Precision-Recall график", use_column_width=True)
 
     st.write("- График результатов:")
-    results_image = Image.open("images/yolo_results/results (1).png")
+    results_image = Image.open("images/yolo_results/results.png")
     st.image(results_image, caption="График результатов", use_column_width=True)
 
 elif description_show == 'Vegetation model':
