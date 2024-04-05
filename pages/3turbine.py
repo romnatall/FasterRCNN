@@ -36,7 +36,8 @@ def detect(image: Image) -> Image:
 
 
 # Загрузка и обработка изображения из файла
-uploaded_file = st.file_uploader("Or upload an image file", type=["jpg", "jpeg", "png"])
+uploaded_file = st.file_uploader("Or upload an image file", type=["jpg", "jpeg", "png","webp"])
+
 if url:
     try:
         response = requests.get(url)

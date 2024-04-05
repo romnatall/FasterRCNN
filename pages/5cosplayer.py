@@ -76,7 +76,7 @@ st.title("Cosplay Detection")
 st.write("""
     Upload an image you want to detect cosplay objects on or enter an image URL.
     """)
-uploaded_files = st.file_uploader("Upload multiple images", accept_multiple_files=True, type=["jpg", "jpeg", "png"])
+uploaded_files = st.file_uploader("Upload multiple images", accept_multiple_files=True, type=["jpg", "jpeg", "png" ,"webp"])
 url = st.text_input("Enter image URL")
 
 

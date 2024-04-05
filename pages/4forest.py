@@ -56,7 +56,7 @@ st.title("UNet for Image Segmentation")
 
 url = st.text_input("Enter image URL")
 # Загрузка изображения
-uploaded_file = st.file_uploader("Upload an image", type=["jpg", "jpeg", "png"])
+uploaded_file = st.file_uploader("Upload an image", type=["jpg", "jpeg", "png","webp"])
 
 if url:
     try:
