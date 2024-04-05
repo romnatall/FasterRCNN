@@ -1,0 +1,38 @@
+[theme]
+primaryColor = "#4AB8F9"  # Ярко-голубой
+backgroundColor = "#E6F0F9"  # Светло-голубой фон
+secondaryBackgroundColor = "#80D0F7"  # Средний оттенок голубого
+textColor = "#303030"  # Темно-серый для чёткости текста на светлом фоне
+font = "sans serif"  # Шрифт без засечек для чистого и современного вида
+
+# Добавляем кастомные стили CSS через markdown
+[custom]
+# Кастомные стили для боковой панели
+sidebar = """
+<style>
+    .css-1aumxhk {
+        background-color: #333333;  # Слегка отличающийся фон для боковой панели
+        border-right: 2px solid #FF4B4B;  # Добавляем границу с основным цветом
+    }
+</style>
+"""
+
+# Кастомные стили для кнопок
+button = """
+<style>
+    .stButton>button {
+        color: #FAFAFA;
+        border: 2px solid #FF4B4B;
+        border-radius: 20px;  # Закругленные углы
+        padding: 10px 24px;
+        font-size: 16px;
+        font-weight: bold;
+        background-color: transparent;
+        transition: all 0.3s;  # Плавное изменение стилей
+    }
+    .stButton>button:hover {
+        background-color: #FF4B4B;
+        color: #2E2E2E;
+    }
+</style>
+"""
