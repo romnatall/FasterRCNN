@@ -82,11 +82,8 @@ if description_show == 'Turbine model':
         turbine_image2 = Image.open("images/yolo results/img2.jpg")
         st.image(turbine_image2, caption="Пример с обнаруженными ветряками 2", use_column_width=True)
     st.subheader("Метрики модели:")
-    st.write("- Матрица ошибок (Confusion Matrix):")
-    confusion_matrix_image = Image.open("images/yolo results/confusion_matrix.png")
-    st.image(confusion_matrix_image, caption="Матрица ошибок", use_column_width=True)
     
-    st.write("- Нормализованная матрица ошибок:")
+    st.write("- Матрица ошибок (Confusion Matrix):")
     confusion_matrix_normalized_image = Image.open("images/yolo results/confusion_matrix_normalized.png")
     st.image(confusion_matrix_normalized_image, caption="Нормализованная матрица ошибок", use_column_width=True)
     
