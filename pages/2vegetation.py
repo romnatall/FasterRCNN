@@ -96,11 +96,11 @@ if url:
         st.error(f"An error occurred: {e}")
         
 # Загрузка и обработка изображения из файла
-uploaded_files = st.file_uploader("Or upload an image file", type=["jpg", "jpeg", "png" ,"webp"], allow_multiple_files=True)
+uploaded_files = st.file_uploader("Upload multiple images", accept_multiple_files=True, type=["jpg", "jpeg", "png" ,"webp"])
+
 for uploaded_file in uploaded_files:
     image = Image.open(uploaded_file).convert('RGB')
     st.image(image, caption="Uploaded Image", use_column_width=True)
-    if st.button("Classify Uploaded Image"):
-        with st.spinner('Processing...'):
-            img, predicted_class = detect(image)
-            st.image(img, caption="Processed Image", use_column_width=True)
+    with st.spinner('Processing...'):
+        img, predicted_class = detect(image)
+        st.image(img, caption="Processed Image", use_column_width=True)

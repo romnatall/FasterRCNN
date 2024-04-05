@@ -56,7 +56,7 @@ st.title("UNet for Image Segmentation")
 
 url = st.text_input("Enter image URL")
 # Загрузка изображения
-uploaded_files = st.file_uploader("Upload an image" , accept_multiple_files=True,  type=["jpg", "jpeg", "png","webp"])
+uploaded_files = st.file_uploader("Upload multiple images", accept_multiple_files=True, type=["jpg", "jpeg", "png" ,"webp"])
 
 if url:
     try:
@@ -76,17 +76,16 @@ for uploaded_file in uploaded_files:
     
     st.image(image, caption="Uploaded Image", use_column_width=True)
 
-    if st.button("Segment Image"):
-        with st.spinner('Processing...'):
-            # Преобразование изображения для модели
-            input_image = T.Compose([
-                T.Resize(256),  # Адаптируйте размер под вашу модель UNet
-                T.ToTensor(),
-            ])(image).unsqueeze(0)
+    with st.spinner('Processing...'):
+        # Преобразование изображения для модели
+        input_image = T.Compose([
+            T.Resize(256),  # Адаптируйте размер под вашу модель UNet
+            T.ToTensor(),
+        ])(image).unsqueeze(0)
 
-            # Получение предсказания от модели
-            with torch.no_grad():
-                output = unet_model(input_image)
-                # Преобразование выходных данных модели обратно в изображение
-                output_image = output.squeeze().cpu().numpy()
-                st.image(output_image, caption="Segmented Image", use_column_width=True)
+        # Получение предсказания от модели
+        with torch.no_grad():
+            output = unet_model(input_image)
+            # Преобразование выходных данных модели обратно в изображение
+            output_image = output.squeeze().cpu().numpy()
+            st.image(output_image, caption="Segmented Image", use_column_width=True)
