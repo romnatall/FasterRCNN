@@ -118,7 +118,7 @@ elif description_show == 'UNet forest model':
     st.write("Класс ForestDataset используется для загрузки изображений леса и их масок сегментации.")
     st.write("Модель UNet на основе архитектуры VGG-11 обучалась для сегментации в течение 10 эпох.")
 
-    st.image("/images/forest/losses_and_metrics.jpg", caption="Графики потерь и метрик", use_column_width=True)
+    st.image("images/forest/losses_and_metrics.jpg", caption="Графики потерь и метрик", use_column_width=True)
 
 
 
