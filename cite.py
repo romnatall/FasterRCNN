@@ -82,7 +82,7 @@ if description_show == 'Turbine model':
         turbine_image2 = Image.open("images/yolo results/img2.jpg")
         st.image(turbine_image2, caption="Пример с обнаруженными ветряками 2", use_column_width=True)
     st.subheader("Метрики модели:")
-    
+
     st.write("- Матрица ошибок (Confusion Matrix):")
     confusion_matrix_normalized_image = Image.open("images/yolo results/confusion_matrix_normalized.png")
     st.image(confusion_matrix_normalized_image, caption="Нормализованная матрица ошибок", use_column_width=True)
@@ -96,7 +96,19 @@ if description_show == 'Turbine model':
     st.image(results_image, caption="График результатов", use_column_width=True)
 
 elif description_show == 'Vegetation model':
-    pass
+
+    st.write("Модель на основе ResNet-18 была разработана для классификации и локализации объектов на изображениях. В этой модели слои извлекателя признаков (backbone) ResNet-18 были заморожены, чтобы сохранить предварительно обученные веса, а затем добавлены отдельные блоки для классификации и предсказания координат объектов.")
+    st.write("Модель была обучена в течение 10 эпох.")
+
+    st.header("Датасет")
+    st.write("Датасет состоял из 118 изображений, содержащих огурцы, баклажаны и грибы. Этот небольшой размер датасета может представлять сложности для обучения модели из-за ограниченного количества данных.")
+
+    st.header("Ключевые особенности")
+    st.write("- Использование модели ResNet-18 для классификации и локализации объектов.")
+    st.write("- Обучение модели на небольшом датасете в течение 10 эпох.")
+    st.write("- Применение замороженных слоев извлекателя признаков и отдельных блоков для классификации и предсказания координат.")
+
+
 elif description_show == 'UNet model':
     pass
 
