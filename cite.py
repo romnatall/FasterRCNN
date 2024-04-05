@@ -109,7 +109,7 @@ elif description_show == 'Vegetation model':
     st.write("- Применение замороженных слоев извлекателя признаков и отдельных блоков для классификации и предсказания координат.")
 
 
-elif description_show == 'UNet model':
+elif description_show == 'UNet forest model':
     
     st.subheader("Дополнительная информация о датасете и модели")
 
